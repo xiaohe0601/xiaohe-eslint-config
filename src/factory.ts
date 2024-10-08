@@ -91,7 +91,7 @@ export function defineConfig(
     solid: enableSolid = false,
     svelte: enableSvelte = false,
     typescript: enableTypeScript = isPackageExists("typescript"),
-    uniapp: enableUniApp = false,
+    uniapp: enableUniApp = isPackageExists("@dcloudio/uni-app"),
     unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = false,
     vue: enableVue = VuePackages.some((i) => isPackageExists(i))
