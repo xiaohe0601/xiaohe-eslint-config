@@ -425,7 +425,7 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
   /**
    * Enable uniapp rules.
    *
-   * @default false
+   * @default auto-detect based on the dependencies
    */
   uniapp?: boolean;
 
