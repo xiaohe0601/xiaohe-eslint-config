@@ -17,6 +17,7 @@ export async function vue(
     files = [GLOB_VUE],
     overrides = {},
     stylistic = true,
+    uniapp = false,
     vueVersion = 3
   } = options;
 
@@ -113,7 +114,6 @@ export async function vue(
         "node/prefer-global/process": "off",
         "ts/explicit-function-return-type": "off",
 
-        "vue/component-name-in-template-casing": ["error", "PascalCase"],
         "vue/component-options-name-casing": ["error", "PascalCase"],
         // this is deprecated
         "vue/component-tags-order": "off",
@@ -217,6 +217,14 @@ export async function vue(
         }],
         "vue/multiline-html-element-content-newline": "off",
         "vue/singleline-html-element-content-newline": "off",
+
+        ...uniapp
+          ? {
+              "vue/component-name-in-template-casing": ["error", "kebab-case"]
+            }
+          : {
+              "vue/component-name-in-template-casing": ["error", "PascalCase"]
+            },
 
         ...overrides
       }

@@ -44,6 +44,13 @@ export interface OptionsVue extends OptionsOverrides {
    * @default 3
    */
   vueVersion?: 2 | 3;
+
+  /**
+   * Enable uniapp rules.
+   *
+   * @default false
+   */
+  uniapp?: boolean;
 }
 
 export type OptionsTypescript =
@@ -414,6 +421,13 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
    * @default true
    */
   autoRenamePlugins?: boolean;
+
+  /**
+   * Enable uniapp rules.
+   *
+   * @default false
+   */
+  uniapp?: boolean;
 
   /**
    * Provide overrides for rules for each integration.

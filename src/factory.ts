@@ -91,6 +91,7 @@ export function defineConfig(
     solid: enableSolid = false,
     svelte: enableSvelte = false,
     typescript: enableTypeScript = isPackageExists("typescript"),
+    uniapp: enableUniApp = false,
     unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = false,
     vue: enableVue = VuePackages.some((i) => isPackageExists(i))
@@ -201,7 +202,8 @@ export function defineConfig(
       ...resolveSubOptions(options, "vue"),
       overrides: getOverrides(options, "vue"),
       stylistic: stylisticOptions,
-      typescript: !!enableTypeScript
+      typescript: !!enableTypeScript,
+      uniapp: enableUniApp
     }));
   }
 
