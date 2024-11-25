@@ -209,6 +209,7 @@ export function defineConfig(
 
   if (enableReact) {
     configs.push(react({
+      ...typescriptOptions,
       overrides: getOverrides(options, "react"),
       tsconfigPath
     }));
