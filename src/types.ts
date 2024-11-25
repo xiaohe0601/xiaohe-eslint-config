@@ -191,8 +191,7 @@ export interface OptionsStylistic {
 }
 
 export interface StylisticConfig
-  extends Pick<StylisticCustomizeOptions, "indent" | "jsx" | "semi"> {
-  quotes?: "single" | "double";
+  extends Pick<StylisticCustomizeOptions, "indent" | "quotes" | "jsx" | "semi"> {
 }
 
 export interface OptionsOverrides {
