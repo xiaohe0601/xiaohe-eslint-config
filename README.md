@@ -1,6 +1,6 @@
 <div align="center">
   <h1>xiaohe-eslint-config</h1>
-  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@3.8.0)</span>
+  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@3.9.2)</span>
 </div>
 
 <br>
