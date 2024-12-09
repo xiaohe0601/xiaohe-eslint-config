@@ -42,6 +42,8 @@ export async function astro(
       name: "antfu/astro/rules",
       processor: "astro/client-side-ts",
       rules: {
+        "antfu/no-top-level-await": "off",
+
         "astro/missing-client-only-directive-value": "error",
         "astro/no-conflict-set-directives": "error",
         "astro/no-deprecated-astro-canonicalurl": "error",
