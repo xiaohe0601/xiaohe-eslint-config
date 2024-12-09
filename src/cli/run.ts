@@ -7,7 +7,7 @@ import { extra, extraOptions, frameworkOptions, frameworks } from "./constants";
 import { updateEslintFiles } from "./stages/update-eslint-files";
 import { updatePackageJson } from "./stages/update-package-json";
 import { updateVscodeSettings } from "./stages/update-vscode-settings";
-import type { ExtraLibrariesOption, FrameworkOption, PromItem, PromptResult } from "./types";
+import type { ExtraLibrariesOption, FrameworkOption, PromptResult } from "./types";
 import { isGitClean } from "./utils";
 
 export interface CliRunOptions {
@@ -56,7 +56,7 @@ export async function run(options: CliRunOptions = {}): Promise<void> {
           ? `"${argExtra}" isn't a valid extra util. Please choose from below: `
           : "Select a extra utils:";
 
-        return p.multiselect<PromItem<ExtraLibrariesOption>[], ExtraLibrariesOption>({
+        return p.multiselect<ExtraLibrariesOption>({
           message: c.reset(message),
           options: extraOptions,
           required: false
@@ -73,7 +73,7 @@ export async function run(options: CliRunOptions = {}): Promise<void> {
           ? `"${argTemplate}" isn't a valid template. Please choose from below: `
           : "Select a framework:";
 
-        return p.multiselect<PromItem<FrameworkOption>[], FrameworkOption>({
+        return p.multiselect<FrameworkOption>({
           message: c.reset(message),
           options: frameworkOptions,
           required: false

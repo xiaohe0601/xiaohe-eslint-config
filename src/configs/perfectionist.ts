@@ -28,7 +28,12 @@ export async function perfectionist(): Promise<TypedFlatConfigItem[]> {
             "object",
             "unknown"
           ],
-          internalPattern: ["~/**", "@/**"],
+          internalPattern: [
+            "^~~/.*",
+            "^~/.*",
+            "^@@/.*",
+            "^@/.*"
+          ],
           newlinesBetween: "never",
           order: "asc",
           type: "natural"
