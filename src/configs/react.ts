@@ -19,6 +19,12 @@ const RemixPackages = [
   "@remix-run/serve",
   "@remix-run/dev"
 ];
+const ReactRouterPackages = [
+  "@react-router/node",
+  "@react-router/react",
+  "@react-router/serve",
+  "@react-router/dev"
+];
 const NextJsPackages = [
   "next"
 ];
@@ -61,6 +67,7 @@ export async function react(
 
   const isAllowConstantExport = ReactRefreshAllowConstantExportPackages.some((i) => isPackageExists(i));
   const isUsingRemix = RemixPackages.some((i) => isPackageExists(i));
+  const isUsingReactRouter = ReactRouterPackages.some((i) => isPackageExists(i));
   const isUsingNext = NextJsPackages.some((i) => isPackageExists(i));
 
   const plugins = pluginReact.configs.all.plugins;
@@ -124,7 +131,7 @@ export async function react(
                     "generateViewport"
                   ]
                 : []),
-              ...(isUsingRemix
+              ...(isUsingRemix || isUsingReactRouter
                 ? [
                     "meta",
                     "links",
