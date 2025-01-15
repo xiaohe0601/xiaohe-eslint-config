@@ -183,9 +183,6 @@ importers:
       eslint-typegen:
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.18.0(jiti@2.4.2))
-      esno:
-        specifier: ^4.8.0
-        version: 4.8.0
       execa:
         specifier: ^9.5.2
         version: 9.5.2
@@ -1874,10 +1871,6 @@ packages:
 
   esm-env@1.2.2:
     resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
-
-  esno@4.8.0:
-    resolution: {integrity: sha512-acMtooReAQGzLU0zcuEDHa8S62meh5aIyi8jboYxyvAePdmuWx2Mpwmt0xjwO0bs9/SXf+dvXJ0QJoDWw814Iw==}
-    hasBin: true
 
   espree@10.3.0:
     resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
@@ -5196,10 +5189,6 @@ snapshots:
       - supports-color
 
   esm-env@1.2.2: {}
-
-  esno@4.8.0:
-    dependencies:
-      tsx: 4.19.2
 
   espree@10.3.0:
     dependencies:
