@@ -8,7 +8,6 @@
 [![github stars][github-stars-src]][github-stars-href]
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
@@ -88,10 +87,6 @@ For more information, please refer to [antfu/eslint-config](https://github.com/a
 [npm-downloads-src]: https://img.shields.io/npm/dm/@xiaohe01/eslint-config?style=flat&colorA=080f12&colorB=1fa669
 
 [npm-downloads-href]: https://npmjs.com/package/@xiaohe01/eslint-config
-
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/@xiaohe01/eslint-config?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-
-[bundle-href]: https://bundlephobia.com/result?p=@xiaohe01/eslint-config
 
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
 
