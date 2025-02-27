@@ -35,7 +35,7 @@ export async function imports(
 
         ...(type === "app"
           ? {
-              "import/extensions": ["error", "ignorePackages"]
+              "import/extensions": ["error", "ignorePackages", { checkTypeImports: true }]
             }
           : {}
         ),
