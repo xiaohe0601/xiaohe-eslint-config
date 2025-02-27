@@ -1,6 +1,6 @@
 <div align="center">
   <h1>xiaohe-eslint-config</h1>
-  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@4.1.1)</span>
+  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@4.3.0)</span>
 </div>
 
 <br>
@@ -55,8 +55,8 @@ Add script for `package.json`, for example
 ```json
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   }
 }
 ```
