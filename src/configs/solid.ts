@@ -1,5 +1,11 @@
 import { GLOB_JSX, GLOB_TSX } from "../globs";
-import type { OptionsFiles, OptionsHasTypeScript, OptionsOverrides, OptionsTypeScriptWithTypes, TypedFlatConfigItem } from "../types";
+import type {
+  OptionsFiles,
+  OptionsHasTypeScript,
+  OptionsOverrides,
+  OptionsTypeScriptWithTypes,
+  TypedFlatConfigItem
+} from "../types";
 import { ensurePackages, interopDefault, toArray } from "../utils";
 
 export async function solid(

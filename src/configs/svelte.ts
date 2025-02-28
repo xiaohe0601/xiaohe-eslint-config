@@ -1,5 +1,11 @@
 import { GLOB_SVELTE } from "../globs";
-import type { OptionsFiles, OptionsHasTypeScript, OptionsOverrides, OptionsStylistic, TypedFlatConfigItem } from "../types";
+import type {
+  OptionsFiles,
+  OptionsHasTypeScript,
+  OptionsOverrides,
+  OptionsStylistic,
+  TypedFlatConfigItem
+} from "../types";
 import { ensurePackages, interopDefault } from "../utils";
 
 export async function svelte(

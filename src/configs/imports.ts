@@ -1,12 +1,9 @@
 import { pluginAntfu, pluginImport } from "../plugins";
-import type { OptionsProjectType, OptionsStylistic, TypedFlatConfigItem } from "../types";
+import type { OptionsStylistic, TypedFlatConfigItem } from "../types";
 
-export async function imports(
-  options: OptionsStylistic & OptionsProjectType = {}
-): Promise<TypedFlatConfigItem[]> {
+export async function imports(options: OptionsStylistic = {}): Promise<TypedFlatConfigItem[]> {
   const {
-    stylistic = true,
-    type = "app"
+    stylistic = true
   } = options;
 
   return [
@@ -25,22 +22,14 @@ export async function imports(
         "import/no-duplicates": "error",
         "import/no-mutable-exports": "error",
         "import/no-named-default": "error",
+        "import/no-self-import": "error",
         "import/no-webpack-loader-syntax": "error",
 
         ...stylistic
           ? {
               "import/newline-after-import": ["error", { count: 1 }]
             }
-          : {},
-
-        ...(type === "app"
-          ? {
-              "import/extensions": ["error", "ignorePackages", { checkTypeImports: true }]
-            }
           : {}
-        ),
-
-        "import/no-self-import": "off"
       }
     }
   ];

@@ -148,8 +148,7 @@ export function defineConfig(
       stylistic: stylisticOptions
     }),
     imports({
-      stylistic: stylisticOptions,
-      type: options.type
+      stylistic: stylisticOptions
     }),
     command(),
 

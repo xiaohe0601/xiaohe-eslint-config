@@ -1,6 +1,7 @@
 import globals from "globals";
 import { pluginAntfu, pluginUnusedImports } from "../plugins";
 import type { OptionsIsInEditor, OptionsOverrides, TypedFlatConfigItem } from "../types";
+import { banImportExtension } from "../utils";
 
 export async function javascript(
   options: OptionsIsInEditor & OptionsOverrides = {}
@@ -117,7 +118,15 @@ export async function javascript(
         "no-restricted-syntax": [
           "error",
           "TSEnumDeclaration[const=true]",
-          "TSExportAssignment"
+          "TSExportAssignment",
+          ...banImportExtension("js"),
+          ...banImportExtension("mjs"),
+          ...banImportExtension("cjs"),
+          ...banImportExtension("jsx"),
+          ...banImportExtension("ts"),
+          ...banImportExtension("mts"),
+          ...banImportExtension("cts"),
+          ...banImportExtension("tsx")
         ],
         "no-self-assign": ["error", { props: true }],
         "no-self-compare": "error",

@@ -119,6 +119,7 @@ export function isPackageInScope(name: string): boolean {
 }
 
 export async function ensurePackages(packages: (string | undefined)[]): Promise<void> {
+  // noinspection PointlessBooleanExpressionJS
   if (process.env.CI || process.stdout.isTTY === false || isCwdInScope === false) {
     return;
   }
@@ -144,6 +145,8 @@ export function isInEditorEnv(): boolean {
   if (isInGitHooksOrLintStaged()) {
     return false;
   }
+
+  // noinspection PointlessBooleanExpressionJS
   return !!(false
     || process.env.VSCODE_PID
     || process.env.VSCODE_CWD
@@ -154,9 +157,38 @@ export function isInEditorEnv(): boolean {
 }
 
 export function isInGitHooksOrLintStaged(): boolean {
+  // noinspection PointlessBooleanExpressionJS
   return !!(false
     || process.env.GIT_PARAMS
     || process.env.VSCODE_GIT_COMMAND
     || process.env.npm_lifecycle_script?.startsWith("lint-staged")
   );
+}
+
+// eslint-disable-next-line ts/explicit-function-return-type
+export function banImportExtension(extension: string) {
+  const message = `Unexpected use of file extension (.${extension}) in import`;
+  const literalAttributeMatcher = `Literal[value=/\\.${extension}$/]`;
+  return [
+    {
+      message,
+      // import foo from 'bar.js';
+      selector: `ImportDeclaration > ${literalAttributeMatcher}.source`
+    },
+    {
+      message,
+      // const foo = import('bar.js');
+      selector: `ImportExpression > ${literalAttributeMatcher}.source`
+    },
+    {
+      message,
+      // type Foo = typeof import('bar.js');
+      selector: `TSImportType > TSLiteralType > ${literalAttributeMatcher}`
+    },
+    {
+      message,
+      // const foo = require('foo.js');
+      selector: `CallExpression[callee.name = "require"] > ${literalAttributeMatcher}.arguments`
+    }
+  ];
 }

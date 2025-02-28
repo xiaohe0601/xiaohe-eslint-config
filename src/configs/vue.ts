@@ -8,7 +8,7 @@ import type {
   OptionsVue,
   TypedFlatConfigItem
 } from "../types";
-import { interopDefault } from "../utils";
+import { banImportExtension, interopDefault } from "../utils";
 
 export async function vue(
   options: OptionsVue & OptionsHasTypeScript & OptionsOverrides & OptionsStylistic & OptionsFiles = {}
@@ -132,7 +132,15 @@ export async function vue(
           "error",
           "DebuggerStatement",
           "LabeledStatement",
-          "WithStatement"
+          "WithStatement",
+          ...banImportExtension("js"),
+          ...banImportExtension("mjs"),
+          ...banImportExtension("cjs"),
+          ...banImportExtension("jsx"),
+          ...banImportExtension("ts"),
+          ...banImportExtension("mts"),
+          ...banImportExtension("cts"),
+          ...banImportExtension("tsx")
         ],
         "vue/no-restricted-v-bind": ["error", "/^v-/"],
         "vue/no-setup-props-reactivity-loss": "off",
