@@ -3,16 +3,12 @@
     "target": "ESNext",
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
   "include": [
     "**/*.ts"
-  ],
-  "exclude": [
-    "./fixtures/**/*.*",
-    "./_fixtures/**/*.*"
   ]
 }
