@@ -4,7 +4,9 @@ import { defineConfig } from "./src";
 export default defineConfig(
   {
     type: "lib",
-    vue: true,
+    vue: {
+      a11y: true
+    },
     react: true,
     solid: true,
     svelte: true,
