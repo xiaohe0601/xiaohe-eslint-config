@@ -29,6 +29,15 @@ export interface OptionsFiles {
   files?: string[];
 }
 
+export interface OptionsUniapp {
+  /**
+   * Enable uniapp rules.
+   *
+   * @default false
+   */
+  uniapp?: boolean;
+}
+
 export interface OptionsVue extends OptionsOverrides {
   /**
    * Create virtual files for Vue SFC blocks to enable linting.
@@ -44,13 +53,6 @@ export interface OptionsVue extends OptionsOverrides {
    * @default 3
    */
   vueVersion?: 2 | 3;
-
-  /**
-   * Enable uniapp rules.
-   *
-   * @default false
-   */
-  uniapp?: boolean;
 }
 
 export type OptionsTypescript =

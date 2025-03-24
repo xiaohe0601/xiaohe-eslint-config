@@ -5,13 +5,14 @@ import type {
   OptionsHasTypeScript,
   OptionsOverrides,
   OptionsStylistic,
+  OptionsUniapp,
   OptionsVue,
   TypedFlatConfigItem
 } from "../types";
 import { banImportExtension, interopDefault } from "../utils";
 
 export async function vue(
-  options: OptionsVue & OptionsHasTypeScript & OptionsOverrides & OptionsStylistic & OptionsFiles = {}
+  options: OptionsVue & OptionsHasTypeScript & OptionsOverrides & OptionsStylistic & OptionsFiles & OptionsUniapp = {}
 ): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_VUE],
@@ -116,6 +117,7 @@ export async function vue(
         "vue/block-order": ["error", {
           order: ["template", "script:not([setup])", "script[setup]", "style:not([scoped])", "style[scoped]"]
         }],
+        "vue/component-name-in-template-casing": ["error", "PascalCase"],
         "vue/component-options-name-casing": ["error", "PascalCase"],
         // this is deprecated
         "vue/component-tags-order": "off",
@@ -227,9 +229,7 @@ export async function vue(
           ? {
               "vue/component-name-in-template-casing": ["error", "kebab-case"]
             }
-          : {
-              "vue/component-name-in-template-casing": ["error", "PascalCase"]
-            },
+          : {},
 
         ...overrides
       }
