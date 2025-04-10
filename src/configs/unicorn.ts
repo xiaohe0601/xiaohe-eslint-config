@@ -2,6 +2,11 @@ import { pluginUnicorn } from "../plugins";
 import type { OptionsUnicorn, TypedFlatConfigItem } from "../types";
 
 export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatConfigItem[]> {
+  const {
+    allRecommended = false,
+    overrides = {}
+  } = options;
+
   return [
     {
       name: "antfu/unicorn/rules",
@@ -9,7 +14,7 @@ export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatCo
         unicorn: pluginUnicorn
       },
       rules: {
-        ...(options.allRecommended
+        ...(allRecommended
           ? pluginUnicorn.configs.recommended.rules
           : {
               "unicorn/consistent-empty-array-spread": "error",
@@ -27,7 +32,9 @@ export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatCo
               "unicorn/prefer-string-starts-ends-with": "error",
               "unicorn/prefer-type-error": "error",
               "unicorn/throw-new-error": "error"
-            })
+            }),
+
+        ...overrides
       }
     }
   ];

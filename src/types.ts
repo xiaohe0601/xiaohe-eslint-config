@@ -151,7 +151,7 @@ export interface OptionsComponentExts {
   componentExts?: string[];
 }
 
-export interface OptionsUnicorn {
+export interface OptionsUnicorn extends OptionsOverrides {
   /**
    * Include all rules recommended by `eslint-plugin-unicorn`, instead of only ones picked by Anthony.
    *
@@ -395,7 +395,7 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
    *
    * @default false
    */
-  svelte?: boolean;
+  svelte?: boolean | OptionsOverrides;
 
   /**
    * Enable unocss rules.
