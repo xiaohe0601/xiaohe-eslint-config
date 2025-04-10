@@ -1,6 +1,6 @@
 <div align="center">
   <h1>xiaohe-eslint-config</h1>
-  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@4.11.0)</span>
+  <span>✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config@4.12.0)</span>
 </div>
 
 <br>
@@ -27,7 +27,7 @@ npm install -D eslint @xiaohe01/eslint-config
 ```
 
 > [!WARNING]
-> ESLint `9.5.0+` is now required
+> Require Node.js >= 18.18.0, and ESLint >= 9.5.0.
 
 ### 🛹 Usage
 
@@ -55,6 +55,14 @@ Add script for `package.json`, for example
 ```
 
 For more information, please refer to [antfu/eslint-config](https://github.com/antfu/eslint-config).
+
+### Comparing to [antfu/eslint-config](https://github.com/antfu/eslint-config)
+
+Most of the rules are the same, but there are some differences:
+
+- I prefer to use `""` and `;`.
+- Some different rules for uniapp.
+- Maybe stricter and simpler.
 
 ### 🏆 License
 
