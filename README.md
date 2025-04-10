@@ -56,7 +56,7 @@ Add script for `package.json`, for example
 
 For more information, please refer to [antfu/eslint-config](https://github.com/antfu/eslint-config).
 
-### Comparing to [antfu/eslint-config](https://github.com/antfu/eslint-config)
+### 🐼 Comparing to antfu/eslint-config
 
 Most of the rules are the same, but there are some differences:
 
