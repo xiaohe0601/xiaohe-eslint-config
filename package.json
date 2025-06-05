@@ -144,7 +144,6 @@
     "@eslint-react/eslint-plugin": "catalog:peer",
     "@eslint/config-inspector": "catalog:dev",
     "@prettier/plugin-xml": "catalog:peer",
-    "@stylistic/eslint-plugin-migrate": "catalog:dev",
     "@types/node": "catalog:dev",
     "@unocss/eslint-plugin": "catalog:peer",
     "@xiaohe01/eslint-config": "workspace:*",
