@@ -61,7 +61,6 @@ export const defaultPluginRenaming = {
 
   "@stylistic": "style",
   "@typescript-eslint": "ts",
-  "import-x": "import",
   "n": "node",
   "vitest": "test",
   "yml": "yaml"
