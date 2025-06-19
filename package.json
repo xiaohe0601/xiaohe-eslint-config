@@ -1,7 +1,7 @@
 {
   "name": "@xiaohe01/eslint-config",
   "type": "module",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "packageManager": "pnpm@10.12.1",
   "description": "✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config)",
   "author": "xiaohe0601 <xiaohe0601@outlook.com>",
