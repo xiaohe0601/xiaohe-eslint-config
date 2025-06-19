@@ -85,11 +85,6 @@ export async function stylistic(
           classes: "always",
           switches: "never"
         }],
-        "style/padding-line-between-statements": [
-          "error",
-          { blankLine: "always", next: "*", prev: "import" },
-          { blankLine: "any", next: "import", prev: "import" }
-        ],
         "style/quote-props": "off",
         "style/yield-star-spacing": ["error", { after: true, before: false }],
 
