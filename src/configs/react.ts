@@ -199,7 +199,11 @@ export async function react(
                     "links",
                     "headers",
                     "loader",
-                    "action"
+                    "action",
+                    "clientLoader",
+                    "clientAction",
+                    "handle",
+                    "shouldRevalidate"
                   ]
                 : [])
             ]
