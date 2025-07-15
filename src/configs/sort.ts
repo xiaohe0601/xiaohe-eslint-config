@@ -118,7 +118,7 @@ export async function sortPackageJson(): Promise<TypedFlatConfigItem[]> {
 export function sortTsconfig(): TypedFlatConfigItem[] {
   return [
     {
-      files: ["**/tsconfig.json", "**/tsconfig.*.json"],
+      files: ["**/[jt]sconfig.json", "**/[jt]sconfig.*.json"],
       name: "antfu/sort/tsconfig-json",
       rules: {
         "jsonc/sort-keys": [
