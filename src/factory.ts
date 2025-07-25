@@ -13,6 +13,7 @@ import {
   jsonc,
   jsx,
   markdown,
+  nextjs,
   node,
   perfectionist,
   pnpm,
@@ -88,6 +89,7 @@ export function defineConfig(
     gitignore: enableGitignore = true,
     imports: enableImports = true,
     jsx: enableJsx = true,
+    nextjs: enableNextjs = false,
     pnpm: enableCatalogs = false, // TODO: smart detect
     react: enableReact = false,
     regexp: enableRegexp = true,
@@ -227,6 +229,12 @@ export function defineConfig(
       ...typescriptOptions,
       overrides: getOverrides(options, "react"),
       tsconfigPath
+    }));
+  }
+
+  if (enableNextjs) {
+    configs.push(nextjs({
+      overrides: getOverrides(options, "nextjs")
     }));
   }
 
