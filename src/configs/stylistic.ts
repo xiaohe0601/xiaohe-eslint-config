@@ -35,7 +35,7 @@ export async function stylistic(
     pluginName: "style",
     quotes,
     semi
-  });
+  }) as TypedFlatConfigItem;
 
   return [
     {
