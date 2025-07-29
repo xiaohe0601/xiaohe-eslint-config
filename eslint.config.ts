@@ -10,7 +10,7 @@ export default defineConfig(
     solid: true,
     svelte: true,
     astro: true,
-    nextjs: true,
+    nextjs: false,
     typescript: true,
     formatters: true,
     pnpm: true,
