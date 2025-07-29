@@ -43,7 +43,7 @@ const configs = await combine(
   formatters(),
   imports(),
   javascript(),
-  jsx(),
+  jsx({ a11y: true }),
   jsdoc(),
   jsonc(),
   markdown(),

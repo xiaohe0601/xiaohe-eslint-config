@@ -14,6 +14,9 @@ export default defineConfig(
     typescript: true,
     formatters: true,
     pnpm: true,
+    jsx: {
+      a11y: true
+    },
     ignores: [
       "**/*.md"
     ]
