@@ -133,7 +133,12 @@ export async function vue(
         "vue/component-tags-order": "off",
         "vue/custom-event-name-casing": ["error", "camelCase"],
         "vue/define-macros-order": ["error", {
-          order: ["defineOptions", "defineProps", "defineEmits", "defineSlots"]
+          order: [
+            "defineOptions",
+            "defineProps",
+            "defineEmits",
+            "defineSlots"
+          ]
         }],
         "vue/dot-location": ["error", "property"],
         "vue/dot-notation": ["error", { allowKeywords: true }],
@@ -264,7 +269,16 @@ export async function vue(
 
         ...uniapp
           ? {
-              "vue/component-name-in-template-casing": ["error", "kebab-case"]
+              "vue/component-name-in-template-casing": ["error", "kebab-case"],
+              "vue/define-macros-order": ["error", {
+                order: [
+                  "definePage",
+                  "defineOptions",
+                  "defineProps",
+                  "defineEmits",
+                  "defineSlots"
+                ]
+              }]
             }
           : {},
 
