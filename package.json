@@ -2,7 +2,7 @@
   "name": "@xiaohe01/eslint-config",
   "type": "module",
   "version": "2.3.0",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.17.0",
   "description": "✌️ ESLint config preset for xiaohe (forked from antfu/eslint-config)",
   "author": "xiaohe0601 <xiaohe0601@outlook.com>",
   "license": "MIT",
