@@ -148,7 +148,7 @@ export async function vue(
           singleline: "beside"
         }],
         "vue/html-closing-bracket-newline": ["error", {
-          multiline: "never",
+          multiline: "always",
           singleline: "never"
         }],
         "vue/html-indent": ["error", indent],
