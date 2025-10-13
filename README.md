@@ -11,8 +11,6 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-xiaohe0601 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
-
 ### 🚁 Installation
 
 ```shell
@@ -66,7 +64,7 @@ Most of the rules are the same, but there are some differences:
 
 ### 🏆 License
 
-- MIT [LICENSE](./LICENSE)
+MIT [LICENSE](./LICENSE)
 
 [github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/xiaohe-eslint-config?style=flat&color=1fa669&labelColor=18181b&logo=github
 [github-stars-href]: https://github.com/xiaohe0601/xiaohe-eslint-config
