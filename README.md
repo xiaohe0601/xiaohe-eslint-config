@@ -68,13 +68,13 @@ Most of the rules are the same, but there are some differences:
 
 - MIT [LICENSE](./LICENSE)
 
-[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/xiaohe-eslint-config?style=flat&colorA=080f12&colorB=1fa669&logo=GitHub
+[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/xiaohe-eslint-config?style=flat&color=1fa669&labelColor=18181b&logo=github
 [github-stars-href]: https://github.com/xiaohe0601/xiaohe-eslint-config
-[npm-version-src]: https://img.shields.io/npm/v/@xiaohe01/eslint-config?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-src]: https://img.shields.io/npm/v/@xiaohe01/eslint-config?style=flat&color=1fa669&labelColor=18181b&logo=npm
 [npm-version-href]: https://npmjs.com/package/@xiaohe01/eslint-config
-[npm-downloads-src]: https://img.shields.io/npm/dm/@xiaohe01/eslint-config?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-src]: https://img.shields.io/npm/dm/@xiaohe01/eslint-config?style=flat&color=1fa669&labelColor=18181b
 [npm-downloads-href]: https://npmjs.com/package/@xiaohe01/eslint-config
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
+[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-1fa669?style=flat&labelColor=18181b
 [jsdocs-href]: https://www.jsdocs.io/package/@xiaohe01/eslint-config
-[license-src]: https://img.shields.io/github/license/xiaohe0601/xiaohe-eslint-config.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-src]: https://img.shields.io/github/license/xiaohe0601/xiaohe-eslint-config.svg?style=flat&color=1fa669&labelColor=18181b
 [license-href]: https://github.com/xiaohe0601/xiaohe-eslint-config/blob/main/LICENSE
