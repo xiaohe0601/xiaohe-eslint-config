@@ -1,4 +1,5 @@
 import process from "node:process";
+import type { Linter } from "eslint";
 import { GLOB_ASTRO_TS, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from "../globs";
 import { pluginAntfu } from "../plugins";
 import type {
@@ -6,6 +7,7 @@ import type {
   OptionsFiles,
   OptionsOverrides,
   OptionsProjectType,
+  OptionsTypeScriptErasableOnly,
   OptionsTypeScriptParserOptions,
   OptionsTypeScriptWithTypes,
   TypedFlatConfigItem
@@ -13,10 +15,11 @@ import type {
 import { interopDefault, renameRules } from "../utils";
 
 export async function typescript(
-  options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions & OptionsProjectType = {}
+  options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions & OptionsProjectType & OptionsTypeScriptErasableOnly = {}
 ): Promise<TypedFlatConfigItem[]> {
   const {
     componentExts = [],
+    erasableOnly = false,
     overrides = {},
     overridesTypeAware = {},
     parserOptions = {},
@@ -185,6 +188,22 @@ export async function typescript(
             ...overridesTypeAware
           }
         }]
+      : [],
+    ...erasableOnly
+      ? [
+          {
+            name: "antfu/typescript/erasable-syntax-only",
+            plugins: {
+              "erasable-syntax-only": await interopDefault(import("eslint-plugin-erasable-syntax-only"))
+            },
+            rules: {
+              "erasable-syntax-only/enums": "error",
+              "erasable-syntax-only/import-aliases": "error",
+              "erasable-syntax-only/namespaces": "error",
+              "erasable-syntax-only/parameter-properties": "error"
+            } as Record<string, Linter.RuleEntry>
+          }
+        ]
       : []
   ];
 }

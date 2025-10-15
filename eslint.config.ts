@@ -11,7 +11,9 @@ export default defineConfig(
     svelte: true,
     astro: true,
     nextjs: false,
-    typescript: true,
+    typescript: {
+      erasableOnly: true
+    },
     formatters: true,
     pnpm: true,
     jsx: {
