@@ -57,7 +57,7 @@ export async function formatters(
   ]);
 
   if (options.slidev && options.markdown !== true && options.markdown !== "prettier") {
-    throw new Error("`slidev` option only works when `markdown` is enabled with `prettier`");
+    throw new Error("[@xiaohe01/eslint-config] `slidev` option only works when `markdown` is enabled with `prettier`");
   }
 
   const {
